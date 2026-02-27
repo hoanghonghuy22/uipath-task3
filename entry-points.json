@@ -1,0 +1,46 @@
+{
+  "$schema": "https://cloud.uipath.com/draft/2024-12/entry-point",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "f3e15b01-1f46-49a7-8cf5-f42639dd9fab",
+      "type": "process"
+    },
+    {
+      "filePath": "Workflows\\PostProcess\\Post_MarkDuplicates.xaml",
+      "uniqueId": "6bdf7c87-a7e6-4eb4-8d23-aa888907c023",
+      "type": "process",
+      "input": {
+        "type": "object",
+        "properties": {
+          "io_dtTongHop": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "in_dictMaNVCount": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "integer",
+              "minimum": -2147483648,
+              "maximum": 2147483647
+            }
+          }
+        },
+        "required": []
+      },
+      "output": {
+        "type": "object",
+        "properties": {
+          "io_dtTongHop": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    }
+  ]
+}
